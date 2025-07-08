@@ -9,9 +9,4 @@ tags:
 
 # we are making this blogging journey possible besause of 
 
-
-
- !![Image Description](/images/Pasted%20image%2020250708200230.png)
-
-obdidian a free notes manager
-
+!![Image](/images/Pasted%20image%2020250708220245.png)

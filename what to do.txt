@@ -1,0 +1,3 @@
+robocopy "C:\Users\abhir\OneDrive\Documents\Obsidian Vault\post" "C:\Users\abhir\abhi-blog\content\post" /mir
+
+ python -u "c:\Users\abhir\abhi-blog\images.py"  
