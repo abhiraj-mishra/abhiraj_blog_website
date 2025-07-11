@@ -1,7 +1,7 @@
 ---
 title: abhiraj-blog-2
 date: 2025-07-08
-draft: true
+draft: false
 tags:
   - abhiraj06
   - blog
