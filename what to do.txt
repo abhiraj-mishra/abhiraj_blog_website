@@ -1,3 +1,18 @@
-robocopy "C:\Users\abhir\OneDrive\Documents\Obsidian Vault\post" "C:\Users\abhir\abhi-blog\content\post" /mir
+robocopy "C:\Users\abhir\OneDrive\Documents\Obsidian Vault\post" "C:\Users\abhir\abhi-blog\content\posts" /mir
 
- python -u "c:\Users\abhir\abhi-blog\images.py"  
+python -u "c:\Users\abhir\abhi-blog\images.py"  
+
+hugo
+
+git remote -v
+
+git pull origin main
+git push origin main
+
+echo "Deploying to GitHub Hostinger..."
+git subtree split --prefix public -b hostinger-deploy
+git push origin hostinger-deploy:hostinger --force
+git branch -D hostinger-deploy
+
+git pull origin main
+git push origin main

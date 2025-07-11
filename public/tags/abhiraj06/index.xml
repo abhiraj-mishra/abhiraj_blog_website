@@ -2,18 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Abhiraj06 on Terminal</title>
-    <link>//localhost:1313/tags/abhiraj06/</link>
+    <link>/tags/abhiraj06/</link>
     <description>Recent content in Abhiraj06 on Terminal</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 08 Jul 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/abhiraj06/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/abhiraj06/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>abhiraj-blog-1</title>
-      <link>//localhost:1313/posts/welcome-to-the-blog/</link>
+      <link>/posts/welcome-to-the-blog/</link>
       <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/welcome-to-the-blog/</guid>
-      <description>&lt;h1 id=&#34;we-are-making-this-blogging-journey-possible-besause-of&#34;&gt;we are making this blogging journey possible besause of&lt;/h1&gt;&#xA;&lt;p&gt;!&lt;img src=&#34;//localhost:1313/images/Pasted%20image%2020250708220245.png&#34; alt=&#34;Image&#34;&gt;&lt;/p&gt;</description>
+      <guid>/posts/welcome-to-the-blog/</guid>
+      <description>&lt;h1 id=&#34;we-are-making-this-blogging-journey-possible-besause-of&#34;&gt;we are making this blogging journey possible besause of&lt;/h1&gt;&#xA;&lt;p&gt;&lt;img src=&#34;/images/Pasted%20image%2020250708221818.png&#34; alt=&#34;Pasted image 20250708221818.png&#34;&gt;&#xA;it is obsidian a note taker&lt;/p&gt;&#xA;&lt;p&gt;and&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;/images/Pasted%20image%2020250708221908.png&#34; alt=&#34;Pasted image 20250708221908.png&#34;&gt;&#xA;Hugo is one of the most popular open-source project. With its amazing speed and flexibility, Hugo makes building websites fun again.&lt;/p&gt;&#xA;&lt;p&gt;!&lt;img src=&#34;/images/Pasted%20image%2020250708220245.png&#34; alt=&#34;Image&#34;&gt;&#xA;an example 👍&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>abhiraj-blog-2</title>
+      <link>/posts/fix-the-obsidian-photos-after-publishing/</link>
+      <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>/posts/fix-the-obsidian-photos-after-publishing/</guid>
+      <description>&lt;h1 id=&#34;once-we-published-the-blog-the-image-changed-their-names-like-this-pasted-image-20250708231636png&#34;&gt;once we published the blog the image changed their names like this &lt;img src=&#34;/images/Pasted%20image%2020250708231636.png&#34; alt=&#34;Pasted image 20250708231636.png&#34;&gt;&lt;/h1&gt;&#xA;&lt;p&gt;has been changed to&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;we are making this blogging journey possible besause of &#xD;&#xA;![Pasted image 20250708221818.png](/images/Pasted%20image%2020250708221818.png)&#xD;&#xA;it is obsidian a note taker&#xD;&#xA;&#xD;&#xA;and&#xD;&#xA;&#xD;&#xA;![Pasted image 20250708221908.png](/images/Pasted%20image%2020250708221908.png)&#xD;&#xA;Hugo is one of the most popular open-source project. With its amazing speed and flexibility, Hugo makes building websites fun again.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;!![Image](/images/Pasted%20image%2020250708220245.png)&#xD;&#xA;an example 👍&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;by a python scrip&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;import os&#xD;&#xA;&#xD;&#xA;import re&#xD;&#xA;&#xD;&#xA;  &#xD;&#xA;&#xD;&#xA;# Path to folder with Markdown files&#xD;&#xA;&#xD;&#xA;folder_path = r&amp;#34;C:\Users\path\to\Obsidian Vault\post&amp;#34;&#xD;&#xA;&#xD;&#xA;  &#xD;&#xA;&#xD;&#xA;# Regex to match the full Markdown image syntax with Pasted image pattern&#xD;&#xA;&#xD;&#xA;pattern = re.compile(r&amp;#39;!\[Pasted image (\d+\.png)\]\(/images/Pasted%20image%20\d+\.png\)&amp;#39;)&#xD;&#xA;&#xD;&#xA;  &#xD;&#xA;&#xD;&#xA;# Go through each .md file in the folder&#xD;&#xA;&#xD;&#xA;for filename in os.listdir(folder_path):&#xD;&#xA;&#xD;&#xA;    if filename.endswith(&amp;#34;.md&amp;#34;):&#xD;&#xA;&#xD;&#xA;        filepath = os.path.join(folder_path, filename)&#xD;&#xA;&#xD;&#xA;  &#xD;&#xA;&#xD;&#xA;        with open(filepath, &amp;#34;r&amp;#34;, encoding=&amp;#34;utf-8&amp;#34;) as f:&#xD;&#xA;&#xD;&#xA;            content = f.read()&#xD;&#xA;&#xD;&#xA;  &#xD;&#xA;&#xD;&#xA;        # Replace with Obsidian-style embed&#xD;&#xA;&#xD;&#xA;        new_content = pattern.sub(r&amp;#39;![[Pasted image \1]]&amp;#39;, content)&#xD;&#xA;&#xD;&#xA;  &#xD;&#xA;&#xD;&#xA;        if new_content != content:&#xD;&#xA;&#xD;&#xA;            with open(filepath, &amp;#34;w&amp;#34;, encoding=&amp;#34;utf-8&amp;#34;) as f:&#xD;&#xA;&#xD;&#xA;                f.write(new_content)&#xD;&#xA;&#xD;&#xA;            print(f&amp;#34;✅ Fixed: {filename}&amp;#34;)&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;hope you like it&#xA;from next blog we will be dam serious&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
